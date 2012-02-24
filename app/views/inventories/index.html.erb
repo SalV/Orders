@@ -1,0 +1,41 @@
+<h1>Listing inventories</h1>
+
+<table>
+  <tr>
+    <th>Inv</th>
+    <th>S desc</th>
+    <th>L desc</th>
+    <th>Image path</th>
+    <th>Origin</th>
+    <th>Qty on hand</th>
+    <th>Qty on order</th>
+    <th>Qty available</th>
+    <th>Product type</th>
+    <th>Sale price</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @inventories.each do |inventory| %>
+  <tr>
+    <td><%= inventory.inv_id %></td>
+    <td><%= inventory.s_desc %></td>
+    <td><%= inventory.l_desc %></td>
+    <td><%= inventory.image_path %></td>
+    <td><%= inventory.origin %></td>
+    <td><%= inventory.qty_on_hand %></td>
+    <td><%= inventory.qty_on_order %></td>
+    <td><%= inventory.qty_available %></td>
+    <td><%= inventory.product_type %></td>
+    <td><%= inventory.sale_price %></td>
+    <td><%= link_to 'Show', inventory %></td>
+    <td><%= link_to 'Edit', edit_inventory_path(inventory) %></td>
+    <td><%= link_to 'Destroy', inventory, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Inventory', new_inventory_path %>

@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Inv:</b>
+  <%= @inventory.inv_id %>
+</p>
+
+<p>
+  <b>S desc:</b>
+  <%= @inventory.s_desc %>
+</p>
+
+<p>
+  <b>L desc:</b>
+  <%= @inventory.l_desc %>
+</p>
+
+<p>
+  <b>Image path:</b>
+  <%= @inventory.image_path %>
+</p>
+
+<p>
+  <b>Origin:</b>
+  <%= @inventory.origin %>
+</p>
+
+<p>
+  <b>Qty on hand:</b>
+  <%= @inventory.qty_on_hand %>
+</p>
+
+<p>
+  <b>Qty on order:</b>
+  <%= @inventory.qty_on_order %>
+</p>
+
+<p>
+  <b>Qty available:</b>
+  <%= @inventory.qty_available %>
+</p>
+
+<p>
+  <b>Product type:</b>
+  <%= @inventory.product_type %>
+</p>
+
+<p>
+  <b>Sale price:</b>
+  <%= @inventory.sale_price %>
+</p>
+
+
+<%= link_to 'Edit', edit_inventory_path(@inventory) %> |
+<%= link_to 'Back', inventories_path %>

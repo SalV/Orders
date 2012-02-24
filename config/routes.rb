@@ -1,4 +1,28 @@
 Orders::Application.routes.draw do
+  resources :inventories
+
+  get "static_pages/home"
+
+  get "static_pages/help"
+
+  get "static_pages/about"
+
+  get "static_pages/admin"
+
+  resources :payments
+
+  resources :trx_details
+
+  resources :trx_headers
+
+  resources :inv_origins
+
+  resources :inv_x_refs
+
+  resources :product_types
+
+  resources :companies
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

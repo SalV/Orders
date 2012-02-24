@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Set:</b>
+  <%= @inv_origin.set_id %>
+</p>
+
+<p>
+  <b>Element:</b>
+  <%= @inv_origin.element_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_inv_origin_path(@inv_origin) %> |
+<%= link_to 'Back', inv_origins_path %>

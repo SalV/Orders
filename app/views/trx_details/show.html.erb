@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Line no:</b>
+  <%= @trx_detail.line_no %>
+</p>
+
+<p>
+  <b>Trx:</b>
+  <%= @trx_detail.trx_id %>
+</p>
+
+<p>
+  <b>Item:</b>
+  <%= @trx_detail.item_id %>
+</p>
+
+<p>
+  <b>Quan ordered:</b>
+  <%= @trx_detail.quan_ordered %>
+</p>
+
+<p>
+  <b>Quan shipped:</b>
+  <%= @trx_detail.quan_shipped %>
+</p>
+
+<p>
+  <b>Unit price:</b>
+  <%= @trx_detail.unit_price %>
+</p>
+
+<p>
+  <b>Comments:</b>
+  <%= @trx_detail.comments %>
+</p>
+
+<p>
+  <b>Post:</b>
+  <%= @trx_detail.post %>
+</p>
+
+
+<%= link_to 'Edit', edit_trx_detail_path(@trx_detail) %> |
+<%= link_to 'Back', trx_details_path %>

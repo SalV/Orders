@@ -1,0 +1,25 @@
+<h1>Listing inv_origins</h1>
+
+<table>
+  <tr>
+    <th>Set</th>
+    <th>Element</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @inv_origins.each do |inv_origin| %>
+  <tr>
+    <td><%= inv_origin.set_id %></td>
+    <td><%= inv_origin.element_id %></td>
+    <td><%= link_to 'Show', inv_origin %></td>
+    <td><%= link_to 'Edit', edit_inv_origin_path(inv_origin) %></td>
+    <td><%= link_to 'Destroy', inv_origin, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Inv origin', new_inv_origin_path %>

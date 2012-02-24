@@ -1,0 +1,25 @@
+<%= form_for(@inv_origin) do |f| %>
+  <% if @inv_origin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@inv_origin.errors.count, "error") %> prohibited this inv_origin from being saved:</h2>
+
+      <ul>
+      <% @inv_origin.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :set_id %><br />
+    <%= f.text_field :set_id %>
+  </div>
+  <div class="field">
+    <%= f.label :element_id %><br />
+    <%= f.text_field :element_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

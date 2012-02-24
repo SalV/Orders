@@ -1,0 +1,29 @@
+<%= form_for(@inv_x_ref) do |f| %>
+  <% if @inv_x_ref.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@inv_x_ref.errors.count, "error") %> prohibited this inv_x_ref from being saved:</h2>
+
+      <ul>
+      <% @inv_x_ref.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :company_id %><br />
+    <%= f.text_field :company_id %>
+  </div>
+  <div class="field">
+    <%= f.label :inv_id %><br />
+    <%= f.text_field :inv_id %>
+  </div>
+  <div class="field">
+    <%= f.label :part_id %><br />
+    <%= f.text_field :part_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

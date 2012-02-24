@@ -1,0 +1,49 @@
+<%= form_for(@trx_detail) do |f| %>
+  <% if @trx_detail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@trx_detail.errors.count, "error") %> prohibited this trx_detail from being saved:</h2>
+
+      <ul>
+      <% @trx_detail.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :line_no %><br />
+    <%= f.number_field :line_no %>
+  </div>
+  <div class="field">
+    <%= f.label :trx_id %><br />
+    <%= f.text_field :trx_id %>
+  </div>
+  <div class="field">
+    <%= f.label :item_id %><br />
+    <%= f.text_field :item_id %>
+  </div>
+  <div class="field">
+    <%= f.label :quan_ordered %><br />
+    <%= f.number_field :quan_ordered %>
+  </div>
+  <div class="field">
+    <%= f.label :quan_shipped %><br />
+    <%= f.number_field :quan_shipped %>
+  </div>
+  <div class="field">
+    <%= f.label :unit_price %><br />
+    <%= f.text_field :unit_price %>
+  </div>
+  <div class="field">
+    <%= f.label :comments %><br />
+    <%= f.text_area :comments %>
+  </div>
+  <div class="field">
+    <%= f.label :post %><br />
+    <%= f.check_box :post %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

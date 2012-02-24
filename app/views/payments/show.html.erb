@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Trx:</b>
+  <%= @payment.trx_id %>
+</p>
+
+<p>
+  <b>Trx type:</b>
+  <%= @payment.trx_type %>
+</p>
+
+<p>
+  <b>Amount paid:</b>
+  <%= @payment.amount_paid %>
+</p>
+
+<p>
+  <b>Pmt date:</b>
+  <%= @payment.pmt_date %>
+</p>
+
+<p>
+  <b>Pmt type:</b>
+  <%= @payment.pmt_type %>
+</p>
+
+<p>
+  <b>Pmt doc:</b>
+  <%= @payment.pmt_doc %>
+</p>
+
+<p>
+  <b>Comments:</b>
+  <%= @payment.comments %>
+</p>
+
+<p>
+  <b>Inv adj code:</b>
+  <%= @payment.inv_adj_code %>
+</p>
+
+
+<%= link_to 'Edit', edit_payment_path(@payment) %> |
+<%= link_to 'Back', payments_path %>

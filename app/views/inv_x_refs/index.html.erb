@@ -1,0 +1,27 @@
+<h1>Listing inv_x_refs</h1>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Inv</th>
+    <th>Part</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @inv_x_refs.each do |inv_x_ref| %>
+  <tr>
+    <td><%= inv_x_ref.company_id %></td>
+    <td><%= inv_x_ref.inv_id %></td>
+    <td><%= inv_x_ref.part_id %></td>
+    <td><%= link_to 'Show', inv_x_ref %></td>
+    <td><%= link_to 'Edit', edit_inv_x_ref_path(inv_x_ref) %></td>
+    <td><%= link_to 'Destroy', inv_x_ref, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Inv x ref', new_inv_x_ref_path %>

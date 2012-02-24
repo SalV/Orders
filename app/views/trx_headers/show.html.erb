@@ -1,0 +1,85 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Company:</b>
+  <%= @trx_header.company_id %>
+</p>
+
+<p>
+  <b>Trx type:</b>
+  <%= @trx_header.trx_type %>
+</p>
+
+<p>
+  <b>Trx:</b>
+  <%= @trx_header.trx_id %>
+</p>
+
+<p>
+  <b>Comments:</b>
+  <%= @trx_header.comments %>
+</p>
+
+<p>
+  <b>Order date:</b>
+  <%= @trx_header.order_date %>
+</p>
+
+<p>
+  <b>Ship date:</b>
+  <%= @trx_header.ship_date %>
+</p>
+
+<p>
+  <b>Order ack date:</b>
+  <%= @trx_header.order_ack_date %>
+</p>
+
+<p>
+  <b>Total amount:</b>
+  <%= @trx_header.total_amount %>
+</p>
+
+<p>
+  <b>Close date:</b>
+  <%= @trx_header.close_date %>
+</p>
+
+<p>
+  <b>Shipping charges1:</b>
+  <%= @trx_header.shipping_charges1 %>
+</p>
+
+<p>
+  <b>Shipping charges2:</b>
+  <%= @trx_header.shipping_charges2 %>
+</p>
+
+<p>
+  <b>Tracking number:</b>
+  <%= @trx_header.tracking_number %>
+</p>
+
+<p>
+  <b>Carrier:</b>
+  <%= @trx_header.carrier %>
+</p>
+
+<p>
+  <b>Agent1:</b>
+  <%= @trx_header.agent1 %>
+</p>
+
+<p>
+  <b>Bank charges:</b>
+  <%= @trx_header.bank_charges %>
+</p>
+
+<p>
+  <b>Other charges:</b>
+  <%= @trx_header.other_charges %>
+</p>
+
+
+<%= link_to 'Edit', edit_trx_header_path(@trx_header) %> |
+<%= link_to 'Back', trx_headers_path %>

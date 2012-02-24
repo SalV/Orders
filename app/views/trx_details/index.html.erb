@@ -1,0 +1,37 @@
+<h1>Listing trx_details</h1>
+
+<table>
+  <tr>
+    <th>Line no</th>
+    <th>Trx</th>
+    <th>Item</th>
+    <th>Quan ordered</th>
+    <th>Quan shipped</th>
+    <th>Unit price</th>
+    <th>Comments</th>
+    <th>Post</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @trx_details.each do |trx_detail| %>
+  <tr>
+    <td><%= trx_detail.line_no %></td>
+    <td><%= trx_detail.trx_id %></td>
+    <td><%= trx_detail.item_id %></td>
+    <td><%= trx_detail.quan_ordered %></td>
+    <td><%= trx_detail.quan_shipped %></td>
+    <td><%= trx_detail.unit_price %></td>
+    <td><%= trx_detail.comments %></td>
+    <td><%= trx_detail.post %></td>
+    <td><%= link_to 'Show', trx_detail %></td>
+    <td><%= link_to 'Edit', edit_trx_detail_path(trx_detail) %></td>
+    <td><%= link_to 'Destroy', trx_detail, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Trx detail', new_trx_detail_path %>

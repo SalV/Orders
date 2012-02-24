@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Company:</b>
+  <%= @inv_x_ref.company_id %>
+</p>
+
+<p>
+  <b>Inv:</b>
+  <%= @inv_x_ref.inv_id %>
+</p>
+
+<p>
+  <b>Part:</b>
+  <%= @inv_x_ref.part_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_inv_x_ref_path(@inv_x_ref) %> |
+<%= link_to 'Back', inv_x_refs_path %>

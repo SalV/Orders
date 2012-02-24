@@ -1,0 +1,81 @@
+<%= form_for(@trx_header) do |f| %>
+  <% if @trx_header.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@trx_header.errors.count, "error") %> prohibited this trx_header from being saved:</h2>
+
+      <ul>
+      <% @trx_header.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :company_id %><br />
+    <%= f.text_field :company_id %>
+  </div>
+  <div class="field">
+    <%= f.label :trx_type %><br />
+    <%= f.text_field :trx_type %>
+  </div>
+  <div class="field">
+    <%= f.label :trx_id %><br />
+    <%= f.text_field :trx_id %>
+  </div>
+  <div class="field">
+    <%= f.label :comments %><br />
+    <%= f.text_area :comments %>
+  </div>
+  <div class="field">
+    <%= f.label :order_date %><br />
+    <%= f.date_select :order_date %>
+  </div>
+  <div class="field">
+    <%= f.label :ship_date %><br />
+    <%= f.date_select :ship_date %>
+  </div>
+  <div class="field">
+    <%= f.label :order_ack_date %><br />
+    <%= f.date_select :order_ack_date %>
+  </div>
+  <div class="field">
+    <%= f.label :total_amount %><br />
+    <%= f.text_field :total_amount %>
+  </div>
+  <div class="field">
+    <%= f.label :close_date %><br />
+    <%= f.date_select :close_date %>
+  </div>
+  <div class="field">
+    <%= f.label :shipping_charges1 %><br />
+    <%= f.text_field :shipping_charges1 %>
+  </div>
+  <div class="field">
+    <%= f.label :shipping_charges2 %><br />
+    <%= f.text_field :shipping_charges2 %>
+  </div>
+  <div class="field">
+    <%= f.label :tracking_number %><br />
+    <%= f.text_field :tracking_number %>
+  </div>
+  <div class="field">
+    <%= f.label :carrier %><br />
+    <%= f.text_field :carrier %>
+  </div>
+  <div class="field">
+    <%= f.label :agent1 %><br />
+    <%= f.text_field :agent1 %>
+  </div>
+  <div class="field">
+    <%= f.label :bank_charges %><br />
+    <%= f.text_field :bank_charges %>
+  </div>
+  <div class="field">
+    <%= f.label :other_charges %><br />
+    <%= f.text_field :other_charges %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

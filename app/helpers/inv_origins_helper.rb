@@ -1,0 +1,2 @@
+module InvOriginsHelper
+end

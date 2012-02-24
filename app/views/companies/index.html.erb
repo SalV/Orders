@@ -1,0 +1,61 @@
+<h1>Listing companies</h1>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Company name</th>
+    <th>Address1</th>
+    <th>Address2</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Postal code</th>
+    <th>Country</th>
+    <th>Phone1</th>
+    <th>Phone2</th>
+    <th>Fax</th>
+    <th>Dba</th>
+    <th>Business since</th>
+    <th>Contact name</th>
+    <th>Contact email</th>
+    <th>Sales tax</th>
+    <th>Credit status</th>
+    <th>Comments</th>
+    <th>Business type</th>
+    <th>Password digest</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @companies.each do |company| %>
+  <tr>
+    <td><%= company.company_id %></td>
+    <td><%= company.company_name %></td>
+    <td><%= company.address1 %></td>
+    <td><%= company.address2 %></td>
+    <td><%= company.city %></td>
+    <td><%= company.state %></td>
+    <td><%= company.postal_code %></td>
+    <td><%= company.country %></td>
+    <td><%= company.phone1 %></td>
+    <td><%= company.phone2 %></td>
+    <td><%= company.fax %></td>
+    <td><%= company.dba %></td>
+    <td><%= company.business_since %></td>
+    <td><%= company.contact_name %></td>
+    <td><%= company.contact_email %></td>
+    <td><%= company.sales_tax_id %></td>
+    <td><%= company.credit_status %></td>
+    <td><%= company.comments %></td>
+    <td><%= company.business_type %></td>
+    <td><%= company.password_digest %></td>
+    <td><%= link_to 'Show', company %></td>
+    <td><%= link_to 'Edit', edit_company_path(company) %></td>
+    <td><%= link_to 'Destroy', company, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Company', new_company_path %>

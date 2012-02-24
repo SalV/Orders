@@ -1,0 +1,53 @@
+<h1>Listing trx_headers</h1>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Trx type</th>
+    <th>Trx</th>
+    <th>Comments</th>
+    <th>Order date</th>
+    <th>Ship date</th>
+    <th>Order ack date</th>
+    <th>Total amount</th>
+    <th>Close date</th>
+    <th>Shipping charges1</th>
+    <th>Shipping charges2</th>
+    <th>Tracking number</th>
+    <th>Carrier</th>
+    <th>Agent1</th>
+    <th>Bank charges</th>
+    <th>Other charges</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @trx_headers.each do |trx_header| %>
+  <tr>
+    <td><%= trx_header.company_id %></td>
+    <td><%= trx_header.trx_type %></td>
+    <td><%= trx_header.trx_id %></td>
+    <td><%= trx_header.comments %></td>
+    <td><%= trx_header.order_date %></td>
+    <td><%= trx_header.ship_date %></td>
+    <td><%= trx_header.order_ack_date %></td>
+    <td><%= trx_header.total_amount %></td>
+    <td><%= trx_header.close_date %></td>
+    <td><%= trx_header.shipping_charges1 %></td>
+    <td><%= trx_header.shipping_charges2 %></td>
+    <td><%= trx_header.tracking_number %></td>
+    <td><%= trx_header.carrier %></td>
+    <td><%= trx_header.agent1 %></td>
+    <td><%= trx_header.bank_charges %></td>
+    <td><%= trx_header.other_charges %></td>
+    <td><%= link_to 'Show', trx_header %></td>
+    <td><%= link_to 'Edit', edit_trx_header_path(trx_header) %></td>
+    <td><%= link_to 'Destroy', trx_header, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Trx header', new_trx_header_path %>
